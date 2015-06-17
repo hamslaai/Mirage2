@@ -1428,7 +1428,7 @@ body {
   font-family: "Ubuntu", "Bitstream Vera Sans", "DejaVu Sans", Tahoma;
   font-size: 13px;
   line-height: 1.428571429;
-  color: #555555;
+  color: #333333;
   background-color: white;
 }
 
@@ -3977,7 +3977,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #959595;
+  color: #737373;
 }
 
 @media (min-width: 768px) {
@@ -6199,7 +6199,7 @@ a.badge:hover, a.badge:focus {
 /* line 27, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_thumbnails.scss */
 .thumbnail .caption {
   padding: 9px;
-  color: #555555;
+  color: #333333;
 }
 
 /* line 36, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_thumbnails.scss */
@@ -8706,8 +8706,8 @@ header .navbar-default .navbar-toggle > .open > a, header .navbar-default .navba
 /* line 453, classic_mirage_color_scheme/_general.scss */
 .label-white {
   background-color: #f7f7f7;
-  color: #555555;
-  border: 1px solid #555555;
+  color: #333333;
+  border: 1px solid #333333;
 }
 
 /**
