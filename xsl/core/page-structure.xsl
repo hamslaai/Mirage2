@@ -695,14 +695,14 @@
         <footer>
                 <div class="row">
                     <hr/>
-                    <div class="col-xs-7 col-sm-8">
+                    <div class="col-xs-4 col-sm-4">
                         <div>
+                        <xsl:text>&#160;&#160;&#160;&#160;</xsl:text> 
 			<a href="http://www.dspace.org">DSpace 5.2</a> | <a href="http://ubuntu.sun.ac.za">Ubuntu 14.04</a> | Copyright © <a href="http://www.sun.ac.za" target="_blank">Stellenbosch University</a>
                         </div>                        
                     </div>
-                    <div class="col-xs-5 col-sm-4 hidden-print">
-                        <div class="pull-right">
-                        <div class="hidden-print">
+                    <div class="col-xs-5 col-sm-5 hidden-print pull-right">
+                            <xsl:text>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</xsl:text> 
                             <a>
                                 <xsl:attribute name="href">
                                     <xsl:value-of
@@ -720,8 +720,9 @@
                                 </xsl:attribute>
                                 <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
                             </a>
-                        </div>
-                        </div>
+                    </div>                        
+                    <div class="col-xs-3 col-sm-3 hidden">
+                    <xsl:text>&#160;</xsl:text>                    
                     </div>
                 </div>
                 <!--Invisible link to HTML sitemap (for search engines) -->
