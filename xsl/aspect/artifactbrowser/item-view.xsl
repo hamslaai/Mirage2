@@ -202,7 +202,7 @@
 
     <xsl:template name="itemSummaryView-DIM-abstract">
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
-            <div class="simple-item-view-description item-page-field-wrapper table">
+            <div class="simple-item-view-description item-page-field-wrapper table word-break">
                 <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5>
                 <div>
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
@@ -228,7 +228,7 @@
 
     <xsl:template name="itemSummaryView-DIM-authors">
         <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
-            <div class="simple-item-view-authors item-page-field-wrapper table">
+            <div class="simple-item-view-authors item-page-field-wrapper table word-break">
                 <!--
                 <h5 class="label label-info"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text></h5>
                 -->
@@ -267,7 +267,7 @@
 
     <xsl:template name="itemSummaryView-DIM-URI">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='uri' and descendant::text()]">
-            <div class="simple-item-view-uri item-page-field-wrapper table">
+            <div class="simple-item-view-uri item-page-field-wrapper table word-break">
                 <h5 class="label label-warning"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text></h5>
                 <br>&#160;</br>
                 <p class="well well-sm">
@@ -291,7 +291,7 @@
 
     <xsl:template name="itemSummaryView-DIM-date">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
-            <div class="simple-item-view-date word-break item-page-field-wrapper table">
+            <div class="simple-item-view-date word-break item-page-field-wrapper table word-break">
                 <!--
                 <h5 class="label label-info"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-date</i18n:text></h5>
                 -->
@@ -308,7 +308,7 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-show-full">
-        <div class="simple-item-view-show-full item-page-field-wrapper table">
+        <div class="simple-item-view-show-full item-page-field-wrapper table word-break">
             <h5>
                 <i18n:text>xmlui.mirage2.itemSummaryView.MetaData</i18n:text>
             </h5>
@@ -321,7 +321,7 @@
 
     <xsl:template name="itemSummaryView-collections">
         <xsl:if test="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']">
-            <div class="simple-item-view-collections item-page-field-wrapper table">
+            <div class="simple-item-view-collections item-page-field-wrapper table word-break">
                 <h5 class="label label-default"><i18n:text>xmlui.mirage2.itemSummaryView.Collections</i18n:text></h5>
                 <div class="spacer">&#160;</div>
                 <xsl:apply-templates select="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference"/>
@@ -332,7 +332,7 @@
     <xsl:template name="itemSummaryView-DIM-file-section">
         <xsl:choose>
             <xsl:when test="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
-                <div class="item-page-field-wrapper table">
+                <div class="item-page-field-wrapper table word-break word-break">
                     <h5 class="label label-primary"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text></h5>
                     <br>&#160;</br>
                     <xsl:variable name="label-1">
