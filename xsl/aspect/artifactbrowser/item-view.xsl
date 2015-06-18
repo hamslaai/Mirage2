@@ -106,32 +106,23 @@
     <xsl:template match="dim:dim" mode="itemSummaryView-DIM">
         <div>
             <xsl:call-template name="itemSummaryView-DIM-title"/>
-            <div class="row">
-                <div class="col-sm-10">
-                  <div class="row">                         
-                    <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-                  </div>
+            <xsl:call-template name="itemSummaryView-DIM-abstract"/>
                   <hr/>
                   <div class="row">
-                        <div class="col-xs-6 col-sm-6">                  
-                          <xsl:call-template name="itemSummaryView-DIM-URI"/>
-                        </div>
-                        <div class="col-xs-6 col-sm-6">
+                        <div class="col-xs-2 col-sm-2">                  
+                           <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>                         
+                        </div>   
+                        <div class="col-xs-5 col-sm-5">
                           <xsl:call-template name="itemSummaryView-DIM-file-section"/>
                         </div>
+                        <div class="col-xs-5 col-sm-5">
+                          <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                        </div>
                   </div>
-                </div>  
-                <div class="col-sm-2">
-                    <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>
-                    <br/>                    
-                    <xsl:call-template name="itemSummaryView-DIM-date"/>
-                    <br/>
-                    <xsl:call-template name="itemSummaryView-DIM-authors"/>
-                    <br/>
-                    <xsl:call-template name="itemSummaryView-show-full"/>
-                </div>
-                                      
-             </div>
+                  <hr/>                  
+                  <div class="row"> 
+                          <xsl:call-template name="itemSummaryView-show-full"/>
+                  </div>
         </div>
     </xsl:template>
 
@@ -240,16 +231,19 @@
                     <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                         <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
+                            <br/>
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:when test="dim:field[@element='creator']">
                         <xsl:for-each select="dim:field[@element='creator']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
+                            <br/>
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:when test="dim:field[@element='contributor']">
                         <xsl:for-each select="dim:field[@element='contributor']">
                             <xsl:call-template name="itemSummaryView-DIM-authors-entry" />
+                            <br/>
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:otherwise>
@@ -271,9 +265,10 @@
 
     <xsl:template name="itemSummaryView-DIM-URI">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='uri' and descendant::text()]">
-            <div class="word-break">
-                <h5 class="label label-warning"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text></h5>
-                <br>&#160;</br>
+            <div>
+            <center>
+                <h5 class="btn btn-warning"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text></h5>
+                <br/><br/>
                 <p>
                 <span>
                     <xsl:for-each select="dim:field[@element='identifier' and @qualifier='uri']">
@@ -289,6 +284,7 @@
                     </xsl:for-each>
                 </span>
                 </p>
+            </center>    
             </div>
         </xsl:if>
     </xsl:template>
@@ -310,13 +306,18 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-show-full">
-        <div class="word-break">
-            <h5 class="label label-primary"><i18n:text>xmlui.mirage2.itemSummaryView.MetaData</i18n:text></h5>
-            <br>&#160;</br>
-            <a>
+        <div>
+            <!-- <h5 class="btn btn-primary"><i18n:text>xmlui.mirage2.itemSummaryView.MetaData</i18n:text></h5>
+            <br/>
+             -->
+             <center>
+             <h5>
+                 <a class="btn btn-primary">
                 <xsl:attribute name="href"><xsl:value-of select="$ds_item_view_toggle_url"/></xsl:attribute>
                 <i18n:text>xmlui.ArtifactBrowser.ItemViewer.show_full</i18n:text>
-            </a>
+                </a>                
+            </h5>
+            </center>
         </div>
     </xsl:template>
 
@@ -334,8 +335,8 @@
         <xsl:choose>
             <xsl:when test="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
                 <div class="word-break">
-                    <h5 class="label label-warning"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text></h5>
-                    <br>&#160;</br>
+                    <h5 class="btn btn-warning"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text></h5>
+                    <br/><br/>
                     <xsl:variable name="label-1">
                             <xsl:choose>
                                 <xsl:when test="confman:getProperty('mirage2.item-view.bitstream.href.label.1')">
