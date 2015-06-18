@@ -314,7 +314,7 @@
         <xsl:if test="count(dri:label)>0">
             <table>
                 <xsl:call-template name="standardAttributes">
-                    <xsl:with-param name="class">ds-gloss-list</xsl:with-param>
+                    <xsl:with-param name="class">table table-bordered ds-gloss-list</xsl:with-param>
                 </xsl:call-template>
                 <xsl:apply-templates select="dri:item" mode="labeled"/>
             </table>

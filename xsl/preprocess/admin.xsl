@@ -83,19 +83,6 @@
     </xsl:template>
 
 
-    <xsl:template match="dri:list[@n='metadataList']/dri:item/dri:figure">
-        <div rend="ds-logo-wrapper">
-        <figure>
-            <xsl:call-template name="copy-attributes"/>
-            <xsl:attribute name="rend">
-                <xsl:value-of select="@rend"/>
-                <xsl:text> logo img-responsive</xsl:text>
-            </xsl:attribute>
-        </figure>
-        </div>
-    </xsl:template>
-
-
   <xsl:template match="*[not(@id='aspect.artifactbrowser.ConfigurableBrowse.div.browse-navigation')
   and not(@id='aspect.administrative.WithdrawnItems.div.browse-navigation') and not(@id='aspect.administrative.PrivateItems.div.browse-navigation')
   and not(@id='aspect.administrative.WithdrawnItems.div.browse-controls') and not(@id='aspect.administrative.PrivateItems.div.browse-controls')]/dri:p[count(./dri:field)>1 and not(dri:field[position()=1 and @type='text'] and dri:field[position()=2 and @type='button'])]">
@@ -231,7 +218,5 @@
      <xsl:template match="dri:meta/dri:pageMeta/dri:metadata[@element='stylesheet'][@qualifier='screen'][@lang='person-lookup']"/>
      <xsl:template match="dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][@lang='person-lookup']"/>
      <xsl:template match="dri:meta/dri:pageMeta/dri:metadata[@element='javascript'][@lang='datatables']"/>
-
-
 
 </xsl:stylesheet>

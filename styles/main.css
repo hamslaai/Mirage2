@@ -9876,6 +9876,36 @@ p.pre {
 }
 
 /* line 175, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_artifactbrowser_FeedbackForm_field_submit {
+  margin-top: 20px;
+}
+
+/* line 179, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_administrative_ControlPanel_field_submit_activate {
+  margin-top: 20px;
+}
+
+/* line 183, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_administrative_ControlPanel_field_submit_deactivate {
+  margin-top: 20px;
+}
+
+/* line 187, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_administrative_ControlPanel_field_submit_harvest_start {
+  margin-left: 20px;
+}
+
+/* line 191, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_administrative_ControlPanel_field_submit_harvest_reset {
+  margin-left: 20px;
+}
+
+/* line 195, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_administrative_item_FindItemForm_field_submit_find {
+  margin-top: 20px;
+}
+
+/* line 198, shared/_dspace-bootstrap-tweaks.scss */
 .ds-item-view-abstract-text {
   padding-left: 20px;
   padding-right: 20px;
