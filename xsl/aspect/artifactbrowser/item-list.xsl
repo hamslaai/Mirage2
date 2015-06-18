@@ -62,9 +62,11 @@
 
                 <div class="item-wrapper row">
                     <div class="col-sm-3 hidden-xs">
+                      <div style="margin-left: 30px;">
                         <xsl:apply-templates select="./mets:fileSec" mode="artifact-preview">
                             <xsl:with-param name="href" select="$href"/>
                         </xsl:apply-templates>
+                      </div>
                     </div>
 
                     <div class="col-sm-9">
@@ -181,7 +183,7 @@
 
     <xsl:template match="mets:fileSec" mode="artifact-preview">
         <xsl:param name="href"/>
-        <div class="thumbnail artifact-preview">
+        <div class="img-thumbnail artifact-preview">
             <a class="image-link" href="{$href}">
                 <xsl:choose>
                     <xsl:when test="mets:fileGrp[@USE='THUMBNAIL']">

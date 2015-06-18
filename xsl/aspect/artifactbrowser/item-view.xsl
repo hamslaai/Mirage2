@@ -104,7 +104,7 @@
 
 
     <xsl:template match="dim:dim" mode="itemSummaryView-DIM">
-        <div class="item-summary-view-metadata">
+        <div>
             <xsl:call-template name="itemSummaryView-DIM-title"/>
             <div class="row">
                 <div class="col-sm-2">
@@ -202,9 +202,9 @@
 
     <xsl:template name="itemSummaryView-DIM-abstract">
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
-            <div class="word-break">
+            <div>
                 <!-- <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5> -->
-                <div>
+                <div class="ds-item-view-abstract-text word-break">
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
