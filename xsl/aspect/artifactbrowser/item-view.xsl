@@ -107,12 +107,6 @@
         <div>
             <xsl:call-template name="itemSummaryView-DIM-title"/>
             <div class="row">
-                <div class="col-sm-2">
-                    <xsl:call-template name="itemSummaryView-DIM-authors"/>
-                    <xsl:call-template name="itemSummaryView-DIM-date"/>  
-                    <hr/>                                      
-                    <xsl:call-template name="itemSummaryView-show-full"/>
-                </div>
                 <div class="col-sm-10">
                   <div class="row">                         
                     <xsl:call-template name="itemSummaryView-DIM-abstract"/>
@@ -126,7 +120,17 @@
                           <xsl:call-template name="itemSummaryView-DIM-file-section"/>
                         </div>
                   </div>
-                </div>                        
+                </div>  
+                <div class="col-sm-2">
+                    <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>
+                    <br/>                    
+                    <xsl:call-template name="itemSummaryView-DIM-date"/>
+                    <br/>
+                    <xsl:call-template name="itemSummaryView-DIM-authors"/>
+                    <br/>
+                    <xsl:call-template name="itemSummaryView-show-full"/>
+                </div>
+                                      
              </div>
         </div>
     </xsl:template>
@@ -166,7 +170,7 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-thumbnail">
-        <div class="img-thumbnail hidden-sm">
+        <div class="img-responsive hidden-sm">
             <xsl:choose>
                 <xsl:when test="//mets:fileSec/mets:fileGrp[@USE='THUMBNAIL']">
                     <xsl:variable name="src">
@@ -292,7 +296,6 @@
     <xsl:template name="itemSummaryView-DIM-date">
         <xsl:if test="dim:field[@element='date' and @qualifier='issued' and descendant::text()]">
             <div class="word-break">
-                <hr/>
                 <!-- <h5 class="label label-default"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-date</i18n:text></h5> -->
                 <span>
                 <xsl:for-each select="dim:field[@element='date' and @qualifier='issued']">
@@ -331,7 +334,7 @@
         <xsl:choose>
             <xsl:when test="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
                 <div class="word-break">
-                    <h5 class="label label-primary"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text></h5>
+                    <h5 class="label label-warning"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text></h5>
                     <br>&#160;</br>
                     <xsl:variable name="label-1">
                             <xsl:choose>
