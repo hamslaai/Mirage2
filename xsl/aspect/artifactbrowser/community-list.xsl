@@ -42,10 +42,10 @@
         on the front page. -->
     <xsl:template name="communitySummaryList-DIM">
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
-        <div>
-            <h4 class="list-group">
-              <span class="list-group-item">            
+        <div class="artifact-description">
+            <h4 class="artifact-title">
                 <a href="{@OBJID}">
+                    <span class="Z3988">
                         <xsl:choose>
                             <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
                                 <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
@@ -54,14 +54,14 @@
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                             </xsl:otherwise>
                         </xsl:choose>
+                    </span>
                 </a>
                 <!--Display community strengths (item counts) if they exist-->
                 <xsl:if test="string-length($data/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
                     <xsl:text> [</xsl:text>
                     <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
-                   <xsl:text>]</xsl:text>
+                    <xsl:text>]</xsl:text>
                 </xsl:if>
-             </span>
             </h4>
             <xsl:variable name="abstract" select="$data/dim:field[@element = 'description' and @qualifier='abstract']/node()"/>
             <xsl:if test="$abstract and string-length($abstract[1]) &gt; 0">
@@ -108,7 +108,7 @@
 
     <xsl:template match="dri:field[@rend = 'community-browser-toggle-button']">
         <p class="toggler-wrap">
-            <a class="btn btn-primary btn-sm toggler collapsed" href="javascript:void(0)" role="button"  data-target="{@value}">
+            <a class="btn btn-default btn-sm toggler collapsed" href="javascript:void(0)" role="button"  data-target="{@value}">
                 <i class="glyphicon glyphicon-minus open-icon hidden" aria-hidden="true"/>
                 <i class="glyphicon glyphicon-plus closed-icon" aria-hidden="true"/>
             </a>

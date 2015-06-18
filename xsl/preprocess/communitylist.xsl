@@ -48,7 +48,10 @@
         </xsl:variable>
         <div>
             <xsl:attribute name="rend">
-                <xsl:text>row</xsl:text>
+                <xsl:text>row community-browser-row</xsl:text>
+                <xsl:if test="ancestor::dri:referenceSet[1][@id='aspect.artifactbrowser.CommunityBrowser.referenceSet.community-browser'] and position() mod 2 = 0">
+                    <xsl:text> odd-community-browser-row</xsl:text>
+                </xsl:if>
             </xsl:attribute>
             <xsl:variable name="externalMetadataURL">
                 <xsl:text>cocoon://</xsl:text>
@@ -118,25 +121,27 @@
     </xsl:template>
 
     <xsl:template match="mets:METS" mode="community-browser">
-     <xsl:variable name="dim" select="mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
-     <div>
-      <p>
-        <xref target="{@OBJID}">
+      <xsl:variable name="dim" select="mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
+       <div class="panel panel-primary">
+        <xref target="{@OBJID}" n="community-browser-link">
             <xsl:value-of select="$dim/dim:field[@element='title']"/>
         </xref>
         <!--Display community strengths (item counts) if they exist-->
         <xsl:if test="string-length($dim/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
-           <xsl:text> [</xsl:text>
-                <xsl:value-of select="$dim/dim:field[@element='format'][@qualifier='extent'][1]"/>
-           <xsl:text>]</xsl:text>
+            <span>
+                <xsl:text> [</xsl:text>
+                <xsl:value-of
+                    select="$dim/dim:field[@element='format'][@qualifier='extent'][1]"/>
+                <xsl:text>]</xsl:text>
+            </span>
         </xsl:if>
+
         <xsl:variable name="description" select="$dim/dim:field[@element='description'][@qualifier='abstract']"/>
         <xsl:if test="string-length($description/text()) > 0">
             <p rend="hidden-xs">
                 <xsl:value-of select="$description"/>
             </p>
         </xsl:if>
-      </p>
      </div>
     </xsl:template>
     
