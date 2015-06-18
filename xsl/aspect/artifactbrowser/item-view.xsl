@@ -108,16 +108,9 @@
             <xsl:call-template name="itemSummaryView-DIM-title"/>
             <div class="row">
                 <div class="col-sm-2">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-12">
-                            <xsl:call-template name="itemSummaryView-DIM-thumbnail"/>
-                        </div>
-                        <div class="col-xs-6 col-sm-12">
-                            <xsl:call-template name="itemSummaryView-DIM-date"/>
-                        </div>
-                    </div>
                     <xsl:call-template name="itemSummaryView-DIM-authors"/>
-                    <hr/>
+                    <xsl:call-template name="itemSummaryView-DIM-date"/>  
+                    <hr/>                                      
                     <xsl:call-template name="itemSummaryView-show-full"/>
                 </div>
                 <div class="col-sm-10">
@@ -210,12 +203,14 @@
     <xsl:template name="itemSummaryView-DIM-abstract">
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
             <div class="word-break">
-                <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5>
+                <!-- <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5> -->
                 <div>
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
+                                <p class="text-justify">
                                 <xsl:copy-of select="node()"/>
+                                </p>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:text>&#160;</xsl:text>
@@ -236,7 +231,6 @@
     <xsl:template name="itemSummaryView-DIM-authors">
         <xsl:if test="dim:field[@element='contributor'][@qualifier='author' and descendant::text()] or dim:field[@element='creator' and descendant::text()] or dim:field[@element='contributor' and descendant::text()]">
             <div class="word-break">
-                <hr/>
                 <!-- <h5 class="label label-default"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-author</i18n:text></h5> -->
                 <xsl:choose>
                     <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
