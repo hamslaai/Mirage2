@@ -58,9 +58,8 @@
         <xsl:variable name="emphasis" select="confman:getProperty('xmlui.theme.mirage.item-list.emphasis')"/>
         <xsl:choose>
             <xsl:when test="'file' = $emphasis">
-
-
-                <div class="item-wrapper row">
+                <!-- For file emphasis, first view thumbnail in left column then title, authors and small abstract in right column -->
+                <div class="row">
                     <div class="col-sm-3 hidden-xs">
                       <div style="margin-left: 30px;">
                         <xsl:apply-templates select="./mets:fileSec" mode="artifact-preview">
@@ -68,15 +67,14 @@
                         </xsl:apply-templates>
                       </div>
                     </div>
-
                     <div class="col-sm-9">
                         <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
                                              mode="itemSummaryList-DIM-metadata">
                             <xsl:with-param name="href" select="$href"/>
                         </xsl:apply-templates>
                     </div>
-
                 </div>
+                <br/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
@@ -113,7 +111,6 @@
             </h4>
             <div class="artifact-info">
                 <span class="author h4">
-                    <small>
                     <xsl:choose>
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
@@ -148,7 +145,6 @@
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                         </xsl:otherwise>
                     </xsl:choose>
-                    </small>
                 </span>
                 <xsl:text> </xsl:text>
                 <xsl:if test="dim:field[@element='date' and @qualifier='issued']">
