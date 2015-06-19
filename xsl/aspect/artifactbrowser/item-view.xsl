@@ -199,7 +199,7 @@
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
             <div>
                 <!-- <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5> -->
-                <div class="ds-item-view-abstract-text word-break">
+                <div class="word-break">
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
@@ -534,7 +534,7 @@
         <xsl:param name="context" select="."/>
         <div class="file-wrapper row">
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail">
+                <div class="img-thumbnail">
                     <a class="image-link">
                         <xsl:attribute name="href">
                             <xsl:value-of select="mets:FLocat[@LOCTYPE='URL']/@xlink:href"/>
@@ -646,9 +646,11 @@
                     <xsl:when test="@ADMID">
                         <xsl:call-template name="display-rights"/>
                     </xsl:when>
+                    <!--
                     <xsl:otherwise>
                         <xsl:call-template name="view-open"/>
                     </xsl:otherwise>
+                    -->
                 </xsl:choose>
             </div>
         </div>
@@ -690,9 +692,11 @@
                     <!-- icon source: http://commons.wikimedia.org/wiki/File:Crystal_Clear_action_lock3.png -->
                 </a>
             </xsl:when>
+            <!--
             <xsl:otherwise>
                 <xsl:call-template name="view-open"/>
             </xsl:otherwise>
+            -->
         </xsl:choose>
     </xsl:template>
 

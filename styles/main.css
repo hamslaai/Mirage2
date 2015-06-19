@@ -9905,10 +9905,9 @@ p.pre {
   margin-top: 20px;
 }
 
-/* line 198, shared/_dspace-bootstrap-tweaks.scss */
-.ds-item-view-abstract-text {
-  padding-left: 20px;
-  padding-right: 20px;
+/* line 199, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_artifactbrowser_ItemRequestForm_field_submit {
+  margin-top: 20px;
 }
 
 /* line 203, shared/_dspace-bootstrap-tweaks.scss */
