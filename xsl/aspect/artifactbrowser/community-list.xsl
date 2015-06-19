@@ -42,10 +42,10 @@
         on the front page. -->
     <xsl:template name="communitySummaryList-DIM">
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
-        <div class="artifact-description">
-            <h4 class="artifact-title">
+        <div>
+            <h4 class="list-group">
+              <span class="list-group-item">  
                 <a href="{@OBJID}">
-                    <span class="Z3988">
                         <xsl:choose>
                             <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
                                 <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
@@ -54,23 +54,15 @@
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                             </xsl:otherwise>
                         </xsl:choose>
-                    </span>
                 </a>
                 <!--Display community strengths (item counts) if they exist-->
                 <xsl:if test="string-length($data/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
-                    <xsl:text> [</xsl:text>
+                  <span class="badge">
                     <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
-                    <xsl:text>]</xsl:text>
+                  </span>
                 </xsl:if>
+             </span>
             </h4>
-            <xsl:variable name="abstract" select="$data/dim:field[@element = 'description' and @qualifier='abstract']/node()"/>
-            <xsl:if test="$abstract and string-length($abstract[1]) &gt; 0">
-                <div class="artifact-info">
-                    <span class="short-description text-muted">
-                        <xsl:value-of select="util:shortenString($abstract, 220, 10)"/>
-                    </span>
-                </div>
-            </xsl:if>
         </div>
     </xsl:template>
 
