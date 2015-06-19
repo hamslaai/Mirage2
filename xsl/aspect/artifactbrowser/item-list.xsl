@@ -61,18 +61,20 @@
                 <!-- For file emphasis, first view thumbnail in left column then title, authors and small abstract in right column -->
                 <div class="row">
                     <div class="col-sm-3 hidden-xs">
-                      <div style="margin-left: 30px;">
+                      <div>
+                        <center>
                         <xsl:apply-templates select="./mets:fileSec" mode="artifact-preview">
                             <xsl:with-param name="href" select="$href"/>
                         </xsl:apply-templates>
+                        </center>
                       </div>
                     </div>
                     <div class="col-sm-9">
-                        <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
-                                             mode="itemSummaryList-DIM-metadata">
-                            <xsl:with-param name="href" select="$href"/>
-                        </xsl:apply-templates>
-                    </div>
+                       <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
+                                  mode="itemSummaryList-DIM-metadata">
+                          <xsl:with-param name="href" select="$href"/>
+                       </xsl:apply-templates>
+                   </div>
                 </div>
                 <br/>
             </xsl:when>
@@ -84,11 +86,11 @@
     </xsl:template>
 
     <!--handles the rendering of a single item in a list in file mode-->
-    <!--handles the rendering of a single item in a list in metadata mode-->
+    
     <xsl:template match="dim:dim" mode="itemSummaryList-DIM-metadata">
         <xsl:param name="href"/>
         <div class="artifact-description">
-            <h4 class="artifact-title">
+            <h4 class="artifact-title word-break">
                 <xsl:element name="a">
                     <xsl:attribute name="href">
                         <xsl:value-of select="$href"/>
@@ -111,6 +113,7 @@
             </h4>
             <div class="artifact-info">
                 <span class="author h4">
+                 <small>
                     <xsl:choose>
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
@@ -145,10 +148,12 @@
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                         </xsl:otherwise>
                     </xsl:choose>
+                 </small>
                 </span>
                 <xsl:text> </xsl:text>
                 <xsl:if test="dim:field[@element='date' and @qualifier='issued']">
-	                <span class="publisher-date h4">  <small>
+	                <span class="publisher-date h4">
+	                  <small>
 	                    <xsl:text>(</xsl:text>
 	                    <xsl:if test="dim:field[@element='publisher']">
 	                        <span class="publisher">
@@ -160,7 +165,8 @@
 	                        <xsl:value-of select="substring(dim:field[@element='date' and @qualifier='issued']/node(),1,10)"/>
 	                    </span>
 	                    <xsl:text>)</xsl:text>
-                        </small></span>
+                     </small>
+                   </span>
                 </xsl:if>
             </div>
             <xsl:if test="dim:field[@element = 'description' and @qualifier='abstract']">
@@ -218,7 +224,7 @@
 
     -->
 
-
+    <!--handles the rendering of a single item in a list in metadata mode-->
 
         <!-- Generate the info about the item from the metadata section -->
         <xsl:template match="dim:dim" mode="itemSummaryList-DIM">

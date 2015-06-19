@@ -9916,6 +9916,16 @@ p.pre {
   font-weight: bold;
 }
 
+/* line 208, shared/_dspace-bootstrap-tweaks.scss */
+.artifact-description {
+  padding-right: 10px;
+}
+
+/* line 212, shared/_dspace-bootstrap-tweaks.scss */
+.artifact-abstract {
+  margin-top: 5px;
+}
+
 /**
  * The contents of this file are subject to the license and copyright
  * detailed in the LICENSE and NOTICE files at the root of the source

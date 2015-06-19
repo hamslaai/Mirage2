@@ -67,7 +67,7 @@
     <!-- First, the detail list case -->
     <xsl:template match="dri:referenceSet[@type = 'detailList']" priority="2">
         <xsl:apply-templates select="dri:head"/>
-        <ul class="ds-referenceSet-list">
+        <ul class="list-unstyled">
             <xsl:apply-templates select="*[not(name()='head')]" mode="detailList"/>
         </ul>
     </xsl:template>
@@ -100,12 +100,12 @@
         <!-- Here we decide whether we have a hierarchical list or a flat one -->
         <xsl:choose>
             <xsl:when test="descendant-or-self::dri:referenceSet/@rend='hierarchy' or ancestor::dri:referenceSet/@rend='hierarchy'">
-                <ul class="ds-artifact-list list-unstyled">
+                <ul class="list-unstyled">
                     <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
                 </ul>
             </xsl:when>
             <xsl:otherwise>
-                <ul class="ds-artifact-list list-unstyled">
+                <ul class="list-unstyled">
                     <xsl:apply-templates select="*[not(name()='head')]" mode="summaryList"/>
                 </ul>
             </xsl:otherwise>
@@ -143,7 +143,7 @@
     </xsl:template>
 
     <xsl:template match="dri:referenceSet[@type = 'itemPageSummaryList']" priority="2">
-        <ul class="ds-referenceSet-list">
+        <ul class="list-unstyled">
             <xsl:apply-templates mode="itemPageSummaryList"/>
         </ul>
     </xsl:template>
@@ -155,7 +155,7 @@
             <!-- No options selected, render the full METS document -->
         </xsl:variable>
         <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
-        <li>
+        <li class="row">
             <xsl:apply-templates select="document($externalMetadataURL)" mode="itemPageSummaryList"/>
             <xsl:apply-templates />
         </li>
@@ -218,14 +218,7 @@
             </xsl:if>-->
         </xsl:variable>
         <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
-        <li>
-            <xsl:attribute name="class">
-                <xsl:text>ds-artifact-item </xsl:text>
-                <xsl:choose>
-                    <xsl:when test="position() mod 2 = 0">even</xsl:when>
-                    <xsl:otherwise>odd</xsl:otherwise>
-                </xsl:choose>
-            </xsl:attribute>
+        <li class="row">
             <xsl:apply-templates select="document($externalMetadataURL)" mode="summaryList"/>
             <xsl:apply-templates />
         </li>
@@ -238,7 +231,7 @@
             <!-- No options selected, render the full METS document -->
         </xsl:variable>
         <xsl:comment> External Metadata URL: <xsl:value-of select="$externalMetadataURL"/> </xsl:comment>
-        <li>
+        <li class="row">
             <xsl:apply-templates select="document($externalMetadataURL)" mode="detailList"/>
             <xsl:apply-templates />
         </li>
