@@ -118,7 +118,7 @@
                                 <!--
                             The footer div, dropping whatever extra information is needed on the page. It will
                             most likely be something similar in structure to the currently given example. -->
-                            <div class="hidden-xs hidden-sm">
+                            <div>
                             <xsl:call-template name="buildFooter"/>
                              </div>
                          </div>
@@ -693,15 +693,15 @@
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <footer>
-                <div class="row">
+                <div class="row hidden-xs hidden-sm hidden-md">
                     <hr/>
-                    <div class="col-xs-4 col-sm-4">
+                    <div class="col-lg-4">
                         <div>
                         <xsl:text>&#160;&#160;&#160;&#160;</xsl:text> 
 			<a href="http://www.dspace.org">DSpace 5.2</a> | <a href="http://ubuntu.sun.ac.za">Ubuntu 14.04</a> | Copyright © <a href="http://www.sun.ac.za" target="_blank">Stellenbosch University</a>
                         </div>                        
                     </div>
-                    <div class="col-xs-5 col-sm-5 hidden-print pull-right">
+                    <div class="col-lg-5 hidden-print pull-right">
                             <xsl:text>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</xsl:text> 
                             <a>
                                 <xsl:attribute name="href">
