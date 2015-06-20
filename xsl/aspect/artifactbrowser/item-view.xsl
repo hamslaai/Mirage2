@@ -109,9 +109,10 @@
             <xsl:call-template name="itemSummaryView-DIM-authors"/>
              <br/>           
             <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-            <div class="well well-sm">
+            <div>
               <center>
                 <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <xsl:call-template name="itemSummaryView-collections"/>                
               </center>
             </div>
                   <div class="col-md-6">
@@ -194,9 +195,9 @@
 
     <xsl:template name="itemSummaryView-DIM-abstract">
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
-            <div>
+            <div class="panel panel-default">
                 <!-- <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5> -->
-                <div class="word-break">
+                <div>
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
@@ -292,8 +293,9 @@
 
     <xsl:template name="itemSummaryView-DIM-URI">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='uri' and descendant::text()]">
-            <div>
-                <span class="text-info"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>
+            <div class="well well-sm">
+                <span class="text-info">
+                <i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>
                 <xsl:text>: </xsl:text>
                     <xsl:for-each select="dim:field[@element='identifier' and @qualifier='uri']">
                         <a>
@@ -343,10 +345,12 @@
 
     <xsl:template name="itemSummaryView-collections">
         <xsl:if test="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']">
-            <div class="word-break">
-                <h5 class="label label-primary"><i18n:text>xmlui.mirage2.itemSummaryView.Collections</i18n:text></h5>
-                <br>&#160;</br>
+            <div class="panel panel-default">
+                <span class="text-info">
+                <i18n:text>xmlui.mirage2.itemSummaryView.Collections</i18n:text>
+                <xsl:text>: </xsl:text>
                 <xsl:apply-templates select="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference"/>
+                </span>
             </div>
         </xsl:if>
     </xsl:template>
