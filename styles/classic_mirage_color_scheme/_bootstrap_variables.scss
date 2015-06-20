@@ -7,10 +7,10 @@
  */
 // Preset Bootstrap variables
 // ----------------------
-$font-family-base:       "Ubuntu","Bitstream Vera Sans","DejaVu Sans",Tahoma;
-$font-family-serif:      "Ubuntu","Bitstream Vera Sans","DejaVu Sans",Tahoma,serif;
-$font-family-sans-serif: "Ubuntu","Bitstream Vera Sans","DejaVu Sans",Tahoma,sans-serif;
-$font-family-monospace:  "Ubuntu","Courier New",monospace;
+$font-family-base:       'Lato';
+$font-family-serif:      'Lato',serif;
+$font-family-sans-serif: 'Lato',sans-serif;
+$font-family-monospace:  'Lato',monospace;
 
 $font-size-base:          13px;
 $font-size-large:         14px;
@@ -24,7 +24,7 @@ $font-size-h5:            1.0em;
 $font-size-h6:            1.0em;
 
 $headings-font-family:    inherit;
-$headings-font-weight:    550;
+$headings-font-weight:    700;
 $headings-line-height:    1.0;
 $headings-color:          inherit;
 

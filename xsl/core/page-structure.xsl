@@ -192,7 +192,7 @@
                 </link>
             </xsl:for-each>
 
-	    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold"/>
+            <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'/>
             <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>
 
             <!-- Add syndication feeds -->
