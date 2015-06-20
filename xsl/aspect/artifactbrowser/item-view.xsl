@@ -234,7 +234,7 @@
                                   <xsl:copy-of select="node()"/>
                                 </span>
                                 <xsl:if test="count(following-sibling::dim:field[@element='contributor'][@qualifier='author']) != 0">
-                                    <xsl:text>; </xsl:text>
+                                    <xsl:text> ; </xsl:text>
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:when>
@@ -242,7 +242,7 @@
                             <xsl:for-each select="dim:field[@element='creator']">
                                 <xsl:copy-of select="node()"/>
                                 <xsl:if test="count(following-sibling::dim:field[@element='creator']) != 0">
-                                    <xsl:text>; </xsl:text>
+                                    <xsl:text> ; </xsl:text>
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:when>
@@ -250,7 +250,7 @@
                             <xsl:for-each select="dim:field[@element='contributor']">
                                 <xsl:copy-of select="node()"/>
                                 <xsl:if test="count(following-sibling::dim:field[@element='contributor']) != 0">
-                                    <xsl:text>; </xsl:text>
+                                    <xsl:text> ; </xsl:text>
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:when>
@@ -264,7 +264,7 @@
                 <xsl:if test="dim:field[@element='date' and @qualifier='issued']">
 	                <span class="text-primary">
 	                  <small>
-	                    <xsl:text>(</xsl:text>
+	                    <xsl:text> (</xsl:text>
 	                    <xsl:if test="dim:field[@element='publisher']">
 	                        <span class="publisher">
 	                            <xsl:copy-of select="dim:field[@element='publisher']/node()"/>
@@ -293,7 +293,7 @@
     <xsl:template name="itemSummaryView-DIM-URI">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='uri' and descendant::text()]">
             <div>
-                <span class="text-danger"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>
+                <span class="text-info"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>
                 <xsl:text>: </xsl:text>
                     <xsl:for-each select="dim:field[@element='identifier' and @qualifier='uri']">
                         <a>
@@ -472,6 +472,7 @@
                 <xsl:text>)</xsl:text>
             </a>
         </div>
+     <br/>
     </xsl:template>
 
     <xsl:template match="dim:dim" mode="itemDetailView-DIM">
