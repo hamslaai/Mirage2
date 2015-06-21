@@ -48,6 +48,36 @@ $link-hover-decoration:  underline;
 $grid-gutter-width:            30px;
 $container-large-desktop:      (1260px + $grid-gutter-width) !default;
 
-$text-color:            $gray-darker !default;
+$text-color:                   $gray-darker !default;
 
-$body-bg:               $gray-dark !default;
+$body-bg:                      $gray-dark !default;
+
+$badge-font-weight:            normal !default;
+
+$btn-font-weight:                normal !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 10%) !default;
+
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-warning-bg, 5%) !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-link-disabled-color:        $gray-light !default;

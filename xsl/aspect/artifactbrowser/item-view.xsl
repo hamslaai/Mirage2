@@ -195,13 +195,13 @@
 
     <xsl:template name="itemSummaryView-DIM-abstract">
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
-            <div class="panel panel-default">
-                <!-- <h5 class="visible-xs"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></h5> -->
+            <div>
+              <span class="text-uppercase text-center"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></span>
                 <div>
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
-                                <p class="text-justify">
+                                <p style="padding: 5px;" class="panel panel-default text-justify">
                                 <xsl:copy-of select="node()"/>
                                 </p>
                             </xsl:when>
@@ -209,13 +209,21 @@
                                 <xsl:text>&#160;</xsl:text>
                             </xsl:otherwise>
                         </xsl:choose>
-                        <xsl:if test="count(following-sibling::dim:field[@element='description' and @qualifier='abstract']) != 0">
-                            <div class="spacer">&#160;</div>
-                        </xsl:if>
                     </xsl:for-each>
-                    <xsl:if test="count(dim:field[@element='description' and @qualifier='abstract']) &gt; 1">
-                        <div class="spacer">&#160;</div>
-                    </xsl:if>
+                </div>
+                <div>
+                    <xsl:for-each select="dim:field[@element='description'][not(@qualifier)]">
+                        <xsl:choose>
+                            <xsl:when test="node()">
+                                <p style="padding: 5px;">
+                                <xsl:copy-of select="node()"/>
+                                </p>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:text>&#160;</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
                 </div>
             </div>
         </xsl:if>
@@ -413,7 +421,7 @@
         <xsl:param name="label" />
         <xsl:param name="size" />
         <div>
-            <a class="btn btn-warning">
+            <a class="btn btn-warning text-uppercase">
                 <xsl:attribute name="href">
                     <xsl:value-of select="$href"/>
                 </xsl:attribute>
