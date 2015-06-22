@@ -7,24 +7,24 @@
  */
 // Preset Bootstrap variables
 // ----------------------
-$font-family-base:       'Open Sans';
-$font-family-serif:      'Open Sans',serif;
-$font-family-sans-serif: 'Open Sans',sans-serif;
-$font-family-monospace:  'Open Sans',monospace;
+$font-family-base:       'Ubuntu';
+$font-family-serif:      'Ubuntu',serif;
+$font-family-sans-serif: 'Ubuntu',sans-serif;
+$font-family-monospace:  'Ubuntu',monospace;
 
 $font-size-base:          13px;
 $font-size-large:         14px;
-$font-size-small:         10px;
+$font-size-small:         12px;
 
-$font-size-h1:            1.1em;
-$font-size-h2:            1.0em;
-$font-size-h3:            1.0em;
+$font-size-h1:            1.3em;
+$font-size-h2:            1.2em;
+$font-size-h3:            1.1em;
 $font-size-h4:            1.0em;
-$font-size-h5:            1.0em;
-$font-size-h6:            1.0em;
+$font-size-h5:            0.8em;
+$font-size-h6:            0.6em;
 
 $headings-font-family:    inherit;
-$headings-font-weight:    600;
+$headings-font-weight:    500;
 $headings-line-height:    1.0;
 $headings-color:          inherit;
 
@@ -43,7 +43,7 @@ $brand-danger:           #d9534f;
 
 $link-color:             $brand-primary;
 $link-hover-color:       $brand-warning;
-$link-hover-decoration:  underline;
+$link-hover-decoration:  none;
 
 $grid-gutter-width:            30px;
 $container-large-desktop:      (1260px + $grid-gutter-width) !default;

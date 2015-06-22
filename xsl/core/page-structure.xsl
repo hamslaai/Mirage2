@@ -181,7 +181,8 @@
                 </link>
             </xsl:for-each>
 
-            <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'/>
+            <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'/>
+
             <link rel="stylesheet" href="{concat($theme-path, 'styles/main.css')}"/>
 
             <!-- Add syndication feeds -->
