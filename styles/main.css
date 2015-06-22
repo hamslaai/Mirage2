@@ -1426,7 +1426,7 @@ html {
 /* line 27, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
   font-family: "Ubuntu";
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.428571429;
   color: #222222;
   background-color: #333333;
@@ -1503,8 +1503,8 @@ img {
 
 /* line 113, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 hr {
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -1536,7 +1536,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.3;
   color: inherit;
 }
 /* line 17, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -1563,8 +1563,8 @@ h6 .small,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 18px;
-  margin-bottom: 9px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 /* line 31, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
@@ -1583,8 +1583,8 @@ h3 .small, .h3 small,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 /* line 42, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h4 small,
@@ -1601,12 +1601,12 @@ h6 .small, .h6 small,
 
 /* line 47, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1 {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 /* line 48, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h2, .h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 /* line 49, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -1621,37 +1621,37 @@ h4, .h4 {
 
 /* line 51, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h5, .h5 {
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 /* line 52, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h6, .h6 {
-  font-size: 0.6em;
+  font-size: 1em;
 }
 
 /* line 58, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 p {
-  margin: 0 0 9px;
+  margin: 0 0 10px;
 }
 
 /* line 62, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .lead {
-  margin-bottom: 18px;
-  font-size: 14px;
+  margin-bottom: 20px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   /* line 62, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
   .lead {
-    font-size: 19.5px;
+    font-size: 21px;
   }
 }
 
 /* line 79, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 small,
 .small {
-  font-size: 92%;
+  font-size: 85%;
 }
 
 /* line 84, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -1813,8 +1813,8 @@ a.bg-danger:hover {
 
 /* line 138, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .page-header {
-  padding-bottom: 8px;
-  margin: 36px 0 18px;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -1822,7 +1822,7 @@ a.bg-danger:hover {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 /* line 154, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 ul ul,
@@ -1854,7 +1854,7 @@ ol ol {
 /* line 185, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 dl {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 /* line 190, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -1914,9 +1914,9 @@ abbr[data-original-title] {
 
 /* line 241, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 blockquote {
-  padding: 9px 18px;
-  margin: 0 0 18px;
-  font-size: 16.25px;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
   border-left: 5px solid #eeeeee;
 }
 /* line 250, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -1971,7 +1971,7 @@ blockquote.pull-right .small:after {
 
 /* line 294, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 address {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-style: normal;
   line-height: 1.428571429;
 }
@@ -2013,9 +2013,9 @@ kbd kbd {
 /* line 41, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_code.scss */
 pre {
   display: block;
-  padding: 8.5px;
-  margin: 0 0 9px;
-  font-size: 12px;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
   line-height: 1.428571429;
   word-break: break-all;
   word-wrap: break-word;
@@ -3180,7 +3180,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 /* line 32, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_tables.scss */
 .table > thead > tr > th,
@@ -3380,7 +3380,7 @@ table th[class*="col-"] {
   /* line 171, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_tables.scss */
   .table-responsive {
     width: 100%;
-    margin-bottom: 13.5px;
+    margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #dddddd;
@@ -3442,8 +3442,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 18px;
-  font-size: 19.5px;
+  margin-bottom: 20px;
+  font-size: 21px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -3503,7 +3503,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.428571429;
   color: #555555;
 }
@@ -3512,9 +3512,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 32px;
+  height: 34px;
   padding: 6px 12px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.428571429;
   color: #555555;
   background-color: white;
@@ -3569,7 +3569,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 32px;
+  line-height: 34px;
   line-height: 1.428571429 \0;
 }
 /* line 186, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
@@ -3607,7 +3607,7 @@ input[type="month"].input-lg,
 .input-group-lg > input[type="month"].form-control,
 .input-group-lg > input[type="month"].input-group-addon,
 .input-group-lg > .input-group-btn > input[type="month"].btn {
-  line-height: 41px;
+  line-height: 44px;
   line-height: 1.33 \0;
 }
 
@@ -3687,7 +3687,7 @@ _:-ms-fullscreen.input-lg,
 /* line 233, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
 .radio label,
 .checkbox label {
-  min-height: 18px;
+  min-height: 20px;
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
@@ -3800,9 +3800,9 @@ select[multiple].input-sm,
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .form-group-lg .form-control {
-  height: 41px;
+  height: 44px;
   padding: 10px 16px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -3811,8 +3811,8 @@ select[multiple].input-sm,
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn, .form-group-lg .form-control {
-  height: 41px;
-  line-height: 41px;
+  height: 44px;
+  line-height: 44px;
 }
 
 /* line 85, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -3832,7 +3832,7 @@ select[multiple].input-lg,
 }
 /* line 342, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback .form-control {
-  padding-right: 40px;
+  padding-right: 42.5px;
 }
 
 /* line 347, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
@@ -3842,9 +3842,9 @@ select[multiple].input-lg,
   right: 0;
   z-index: 2;
   display: block;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
   text-align: center;
   pointer-events: none;
 }
@@ -3853,9 +3853,9 @@ select[multiple].input-lg,
 .input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback {
-  width: 41px;
-  height: 41px;
-  line-height: 41px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
 }
 
 /* line 364, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
@@ -3965,7 +3965,7 @@ select[multiple].input-lg,
 
 /* line 384, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label ~ .form-control-feedback {
-  top: 23px;
+  top: 25px;
 }
 /* line 387, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
@@ -4054,7 +4054,7 @@ select[multiple].input-lg,
 /* line 516, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 25px;
+  min-height: 27px;
 }
 /* line 521, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .form-group {
@@ -4108,7 +4108,7 @@ select[multiple].input-lg,
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.428571429;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -4337,7 +4337,7 @@ select[multiple].input-lg,
 /* line 127, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -4456,7 +4456,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
   background-color: white;
   border: 1px solid #cccccc;
@@ -4474,7 +4474,7 @@ tbody.collapse.in {
 /* line 58, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_dropdowns.scss */
 .dropdown-menu .divider {
   height: 1px;
-  margin: 8px 0;
+  margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4885,7 +4885,7 @@ tbody.collapse.in {
 /* line 73, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1;
   color: #555555;
@@ -4907,7 +4907,7 @@ tbody.collapse.in {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 10px 16px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 6px;
 }
 /* line 98, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_input-groups.scss */
@@ -5029,7 +5029,7 @@ tbody.collapse.in {
 /* line 59, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav .nav-divider {
   height: 1px;
-  margin: 8px 0;
+  margin: 9px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -5180,7 +5180,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 /* line 15, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
@@ -5339,9 +5339,9 @@ tbody.collapse.in {
 /* line 164, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 16px 15px;
-  font-size: 14px;
-  line-height: 18px;
+  padding: 15px 15px;
+  font-size: 16px;
+  line-height: 20px;
   height: 50px;
 }
 /* line 172, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5396,13 +5396,13 @@ tbody.collapse.in {
 
 /* line 233, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 8px -15px;
+  margin: 7.5px -15px;
 }
 /* line 236, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 18px;
+  line-height: 20px;
 }
 @media (max-width: 767px) {
   /* line 244, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5422,7 +5422,7 @@ tbody.collapse.in {
   }
   /* line 256, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 18px;
+    line-height: 20px;
   }
   /* line 259, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -5441,8 +5441,8 @@ tbody.collapse.in {
   }
   /* line 273, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -5455,8 +5455,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   /* line 423, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_forms.scss */
@@ -5558,8 +5558,8 @@ tbody.collapse.in {
 
 /* line 342, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 /* line 345, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
@@ -5574,8 +5574,8 @@ tbody.collapse.in {
 
 /* line 358, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   /* line 358, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5815,7 +5815,7 @@ tbody.collapse.in {
 /* line 6, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   list-style: none;
   background-color: whitesmoke;
   border-radius: 4px;
@@ -5839,7 +5839,7 @@ tbody.collapse.in {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 18px 0;
+  margin: 20px 0;
   border-radius: 4px;
 }
 /* line 10, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_pagination.scss */
@@ -5908,7 +5908,7 @@ tbody.collapse.in {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 14px;
+  font-size: 16px;
 }
 /* line 12, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_pagination.scss */
 .pagination-lg > li:first-child > a,
@@ -5945,7 +5945,7 @@ tbody.collapse.in {
 /* line 6, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_pager.scss */
 .pager {
   padding-left: 0;
-  margin: 18px 0;
+  margin: 20px 0;
   list-style: none;
   text-align: center;
 }
@@ -6142,7 +6142,7 @@ a.badge:hover, a.badge:focus {
 /* line 16, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 200;
 }
 /* line 22, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
@@ -6170,7 +6170,7 @@ a.badge:hover, a.badge:focus {
   /* line 44, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 58.5px;
+    font-size: 63px;
   }
 }
 
@@ -6178,7 +6178,7 @@ a.badge:hover, a.badge:focus {
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   line-height: 1.428571429;
   background-color: #333333;
   border: 1px solid #dddddd;
@@ -6212,7 +6212,7 @@ a.thumbnail.active {
 /* line 9, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_alerts.scss */
 .alert {
   padding: 15px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -6336,8 +6336,8 @@ a.thumbnail.active {
 /* line 26, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress {
   overflow: hidden;
-  height: 18px;
-  margin-bottom: 18px;
+  height: 20px;
+  margin-bottom: 20px;
   background-color: whitesmoke;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -6350,7 +6350,7 @@ a.thumbnail.active {
   width: 0%;
   height: 100%;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 20px;
   color: white;
   text-align: center;
   background-color: #76273c;
@@ -6677,7 +6677,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 7, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_panels.scss */
 .panel {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -6715,7 +6715,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 15px;
+  font-size: 16px;
   color: inherit;
 }
 /* line 39, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_panels.scss */
@@ -6930,7 +6930,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 212, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_panels.scss */
 .panel-group {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 /* line 216, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_panels.scss */
 .panel-group .panel {
@@ -7166,7 +7166,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 6, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_close.scss */
 .close {
   float: right;
-  font-size: 19.5px;
+  font-size: 21px;
   font-weight: bold;
   line-height: 1;
   color: black;
@@ -7488,7 +7488,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: left;
@@ -7522,7 +7522,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 13px;
+  font-size: 14px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
@@ -8400,7 +8400,7 @@ footer hr {
 }
 /* line 137, classic_mirage_color_scheme/_general.scss */
 footer .row > div {
-  padding-top: 18px;
+  padding-top: 20px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -8440,7 +8440,7 @@ footer > .container .pull-right {
 
 /* line 171, classic_mirage_color_scheme/_general.scss */
 #ds-options {
-  padding-top: 18px;
+  padding-top: 20px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 171, classic_mirage_color_scheme/_general.scss */
@@ -9911,22 +9911,32 @@ p.pre {
 }
 
 /* line 203, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_discovery_CommunitySearch_p_search-query {
+  width: 100%;
+}
+
+/* line 207, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_discovery_CollectionSearch_p_search-query {
+  width: 100%;
+}
+
+/* line 211, shared/_dspace-bootstrap-tweaks.scss */
 .community-browser-row a[name='community-browser-link'] {
   margin-left: 40px;
   font-weight: 500;
 }
 
-/* line 208, shared/_dspace-bootstrap-tweaks.scss */
+/* line 216, shared/_dspace-bootstrap-tweaks.scss */
 .artifact-description {
   padding-right: 10px;
 }
 
-/* line 212, shared/_dspace-bootstrap-tweaks.scss */
+/* line 220, shared/_dspace-bootstrap-tweaks.scss */
 .artifact-abstract {
   margin-top: 5px;
 }
 
-/* line 216, shared/_dspace-bootstrap-tweaks.scss */
+/* line 224, shared/_dspace-bootstrap-tweaks.scss */
 body {
   -webkit-font-smoothing: antialiased;
 }
