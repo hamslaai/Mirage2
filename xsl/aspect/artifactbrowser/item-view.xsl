@@ -127,11 +127,11 @@
     <xsl:template name="itemSummaryView-DIM-title">
         <xsl:choose>
             <xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) &gt; 1">
-                <h1>
+                <h1 class="text-uppercase">
                     <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
                 </h1>
-                <div class="simple-item-view-other">
-                    <p class="lead">
+                <div>
+                    <p>
                         <xsl:for-each select="dim:field[@element='title'][not(@qualifier)]">
                             <xsl:if test="not(position() = 1)">
                                 <xsl:value-of select="./node()"/>
@@ -146,12 +146,12 @@
                 </div>
             </xsl:when>
             <xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) = 1">
-                <h1>
+                <h1 class="text-uppercase">
                     <xsl:value-of select="dim:field[@element='title'][not(@qualifier)][1]/node()"/>
                 </h1>
             </xsl:when>
             <xsl:otherwise>
-                <h1> 
+                <h1 class="text-uppercase"> 
                     <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
                 </h1>
             </xsl:otherwise>

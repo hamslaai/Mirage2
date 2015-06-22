@@ -103,25 +103,14 @@
                                     <div class="horizontal-slider clearfix">
                                         <div class="col-xs-12 col-sm-12 col-md-9 main-content">
                                             <xsl:apply-templates select="*[not(self::dri:options)]"/>
-
-                                            <div class="visible-xs visible-sm">
-                                                <xsl:call-template name="buildFooter"/>
-                                            </div>
                                         </div>
                                         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
                                             <xsl:apply-templates select="dri:options"/>
                                         </div>
-
-                                    </div>
+                                   </div>
+                                  <xsl:call-template name="buildFooter"/>
                                 </div>
-
-                                <!--
-                            The footer div, dropping whatever extra information is needed on the page. It will
-                            most likely be something similar in structure to the currently given example. -->
-                            <div>
-                            <xsl:call-template name="buildFooter"/>
-                             </div>
-                         </div>
+                            </div>
 
 
                         </xsl:otherwise>
@@ -694,16 +683,14 @@
     <xsl:template name="buildFooter">
         <footer>
                 <div class="row hidden-xs hidden-sm hidden-md">
-                    <hr/>
-                    <div class="col-lg-4">
-                        <div>
-                        <xsl:text>&#160;&#160;&#160;&#160;</xsl:text> 
-			<a href="http://www.dspace.org">DSpace 5.2</a> | <a href="http://ubuntu.sun.ac.za">Ubuntu 14.04</a> | Copyright © <a href="http://www.sun.ac.za" target="_blank">Stellenbosch University</a>
+                    <div class="col-lg-9">
+                        <div style="background-color: #ccc; padding: 10px;" >
+			               <a style="padding-left:25px;" href="http://www.dspace.org">DSpace 5.2</a> | <a href="http://ubuntu.sun.ac.za">Ubuntu 14.04</a> | Copyright © <a href="http://www.sun.ac.za" target="_blank">Stellenbosch University</a>
                         </div>                        
                     </div>
-                    <div class="col-lg-5 hidden-print pull-right">
-                            <xsl:text>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</xsl:text> 
-                            <a>
+                    <div class="col-lg-3 hidden-print">
+                         <div style="background-color: #ccc; padding: 10px;" >
+                            <a style="padding-left:70px;" >
                                 <xsl:attribute name="href">
                                     <xsl:value-of
                                             select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/>
@@ -720,10 +707,8 @@
                                 </xsl:attribute>
                                 <i18n:text>xmlui.dri2xhtml.structural.feedback-link</i18n:text>
                             </a>
+                         </div>
                     </div>                        
-                    <div class="col-xs-3 col-sm-3 hidden">
-                    <xsl:text>&#160;</xsl:text>                    
-                    </div>
                 </div>
                 <!--Invisible link to HTML sitemap (for search engines) -->
                 <a class="hidden">
@@ -734,7 +719,6 @@
                     </xsl:attribute>
                     <xsl:text>&#160;</xsl:text>
                 </a>
-            <p>&#160;</p>
         </footer>
     </xsl:template>
 
