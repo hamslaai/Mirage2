@@ -1425,7 +1425,7 @@ html {
 
 /* line 27, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Lato";
+  font-family: "Open Sans";
   font-size: 13px;
   line-height: 1.428571429;
   color: #222222;
@@ -1535,7 +1535,7 @@ hr {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: inherit;
 }
@@ -1981,7 +1981,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "Lato", monospace;
+  font-family: "Open Sans", monospace;
 }
 
 /* line 15, ../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap/_code.scss */
@@ -9924,6 +9924,11 @@ p.pre {
 /* line 212, shared/_dspace-bootstrap-tweaks.scss */
 .artifact-abstract {
   margin-top: 5px;
+}
+
+/* line 216, shared/_dspace-bootstrap-tweaks.scss */
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
 /**

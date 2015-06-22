@@ -1304,7 +1304,6 @@
                     </xsl:if>
                 </xsl:attribute>
                 <xsl:apply-templates/>
-                <xsl:text>:&#160;</xsl:text>
             </label>
         </div>
     </xsl:template>
