@@ -42,8 +42,8 @@
     <xsl:template name="collectionSummaryList-DIM">
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
         <div>
-            <h4 class="list-group">
-              <span class="list-group-item">            
+            <h4>
+              <span style="margin-left: 40px;">            
                 <a href="{@OBJID}">
                         <xsl:choose>
                             <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
@@ -56,48 +56,69 @@
                 </a>
                 <!--Display community strengths (item counts) if they exist-->
                 <xsl:if test="string-length($data/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
-                   <span class="badge">
+                   <span style="margin-left: 10px;" class="badge">
                     <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
                    </span>
                 </xsl:if>
              </span>
             </h4>
+             <!--Display description-->
+              <span style="margin-left: 40px;"> 
+      	         <small>
+	      	        <xsl:choose>
+		            <xsl:when test="$data/dim:field[@element='description' and @qualifier='abstract']">
+		                <xsl:copy-of select="$data/dim:field[@element='description' and @qualifier='abstract']/node()"/>
+	        	    </xsl:when>
+	        	    <xsl:otherwise>
+	        	        <xsl:copy-of select="$data/dim:field[@element='description'][1]/node()"/>
+	        	    </xsl:otherwise>
+	        	</xsl:choose>
+	        </small>
+	       </span>
         </div>
     </xsl:template>
 
-    <!-- A collection rendered in the detailList pattern. Encountered on the item view page as
-        the "this item is part of these collections" list -->
+    <!-- A collection rendered in the detailList pattern. Encountered on the full item view page -->
     <xsl:template name="collectionDetailList-DIM">
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
-        <a href="{@OBJID}">
-            <xsl:choose>
-	            <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
-	                <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
-	            </xsl:when>
-	            <xsl:otherwise>
-	                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
-	            </xsl:otherwise>
-            </xsl:choose>
-        </a>
+        <div>
+            <h4>
+              <span style="margin-left: 40px;">     
+	        <a href="{@OBJID}">
+	            <xsl:choose>
+		            <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
+		                <xsl:value-of select="$data/dim:field[@element='title'][1]"/>
+		            </xsl:when>
+		            <xsl:otherwise>
+		                <i18n:text>xmlui.dri2xhtml.METS-1.0.no-title</i18n:text>
+		            </xsl:otherwise>
+	            </xsl:choose>
+	        </a>
+             </span>
 		<!--Display collection strengths (item counts) if they exist-->
 		<xsl:if test="string-length($data/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
-            <xsl:text> [</xsl:text>
-            <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
-            <xsl:text>]</xsl:text>
-        </xsl:if>
-        <br/>
-        <xsl:choose>
-            <xsl:when test="$data/dim:field[@element='description' and @qualifier='abstract']">
-                <xsl:copy-of select="$data/dim:field[@element='description' and @qualifier='abstract']/node()"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:copy-of select="$data/dim:field[@element='description'][1]/node()"/>
-            </xsl:otherwise>
-        </xsl:choose>
+                   <span style="margin-left: 10px;" class="badge">
+		      <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
+                   </span>
+	        </xsl:if>
+            </h4>
+            <!--Display description-->
+              <span style="margin-left: 40px;"> 
+               <small>
+		        <xsl:choose>
+		            <xsl:when test="$data/dim:field[@element='description' and @qualifier='abstract']">
+		                <xsl:copy-of select="$data/dim:field[@element='description' and @qualifier='abstract']/node()"/>
+		            </xsl:when>
+		            <xsl:otherwise>
+		                <xsl:copy-of select="$data/dim:field[@element='description'][1]/node()"/>
+		            </xsl:otherwise>
+		        </xsl:choose>
+	        </small>
+	       </span>
+       </div>
     </xsl:template>
 
-    <!-- A collection rendered in the detailList pattern. Encountered on the item view page as
-        the "this item is part of these collections" list -->
+    <!-- A collection rendered in the detailList pattern. Encountered on the simple item view page -->
     <xsl:template name="collectionItemPageSummaryList-DIM">
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
         <a href="{@OBJID}">
@@ -112,10 +133,10 @@
         </a>
 		<!--Display collection strengths (item counts) if they exist-->
 		<xsl:if test="string-length($data/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
-            <xsl:text> [</xsl:text>
-            <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
-            <xsl:text>]</xsl:text>
-        </xsl:if>
+                   <span style="margin-left: 10px;" class="badge">
+		      <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
+	           </span>
+	        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>

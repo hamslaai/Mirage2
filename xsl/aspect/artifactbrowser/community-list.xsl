@@ -38,13 +38,12 @@
 
     <xsl:output indent="yes"/>
 
-    <!-- A community rendered in the summaryList pattern. Encountered on the community-list and on
-        on the front page. -->
+    <!-- A community rendered in the summaryList pattern. Encountered on the community-list page. -->
     <xsl:template name="communitySummaryList-DIM">
         <xsl:variable name="data" select="./mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
         <div>
-            <h4 class="list-group">
-              <span class="list-group-item">  
+            <h4>
+              <span style="margin-left: 30px;">  
                 <a href="{@OBJID}">
                         <xsl:choose>
                             <xsl:when test="string-length($data/dim:field[@element='title'][1]) &gt; 0">
@@ -57,12 +56,25 @@
                 </a>
                 <!--Display community strengths (item counts) if they exist-->
                 <xsl:if test="string-length($data/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
-                  <span class="badge">
+                  <span  style="margin-left: 10px;" class="badge">
                     <xsl:value-of select="$data/dim:field[@element='format'][@qualifier='extent'][1]"/>
                   </span>
                 </xsl:if>
              </span>
             </h4>
+            <!--Display description-->
+              <span style="margin-left: 30px;">
+                 <small>              
+	            <xsl:choose>
+        	        <xsl:when test="$data/dim:field[@element='description' and @qualifier='abstract']">
+        	            <xsl:copy-of select="$data/dim:field[@element='description' and @qualifier='abstract']/node()"/>
+        	        </xsl:when>
+        	        <xsl:otherwise>
+        	            <xsl:copy-of select="$data/dim:field[@element='description'][1]/node()"/>
+        	        </xsl:otherwise>
+        	    </xsl:choose>
+        	 </small>
+	      </span>        	                  
         </div>
     </xsl:template>
 

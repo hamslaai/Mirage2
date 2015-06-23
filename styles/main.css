@@ -9911,32 +9911,37 @@ p.pre {
 }
 
 /* line 203, shared/_dspace-bootstrap-tweaks.scss */
+#aspect_administrative_CurateForm_field_submit_curate_task {
+  margin-top: 20px;
+}
+
+/* line 207, shared/_dspace-bootstrap-tweaks.scss */
 #aspect_discovery_CommunitySearch_p_search-query {
   width: 100%;
 }
 
-/* line 207, shared/_dspace-bootstrap-tweaks.scss */
+/* line 211, shared/_dspace-bootstrap-tweaks.scss */
 #aspect_discovery_CollectionSearch_p_search-query {
   width: 100%;
 }
 
-/* line 211, shared/_dspace-bootstrap-tweaks.scss */
+/* line 215, shared/_dspace-bootstrap-tweaks.scss */
 .community-browser-row a[name='community-browser-link'] {
   margin-left: 40px;
   font-weight: 500;
 }
 
-/* line 216, shared/_dspace-bootstrap-tweaks.scss */
+/* line 220, shared/_dspace-bootstrap-tweaks.scss */
 .artifact-description {
   padding-right: 10px;
 }
 
-/* line 220, shared/_dspace-bootstrap-tweaks.scss */
+/* line 224, shared/_dspace-bootstrap-tweaks.scss */
 .artifact-abstract {
   margin-top: 5px;
 }
 
-/* line 224, shared/_dspace-bootstrap-tweaks.scss */
+/* line 228, shared/_dspace-bootstrap-tweaks.scss */
 body {
   -webkit-font-smoothing: antialiased;
 }

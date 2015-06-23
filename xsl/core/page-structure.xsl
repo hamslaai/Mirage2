@@ -738,11 +738,13 @@
     <xsl:template match="dri:body">
         <div>
             <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']">
-                <div class="alert">
+             <div>
+                <div style="background-color: #ff9900; color: #fff;" class="alert">
                     <button type="button" class="close" data-dismiss="alert">&#215;</button>
-                    <xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>
+                    <xsl:copy-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='alert'][@qualifier='message']/node()"/>                    
                 </div>
-            </xsl:if>
+             </div>                
+           </xsl:if>
 
             <!-- Check for the custom pages -->
             <xsl:choose>

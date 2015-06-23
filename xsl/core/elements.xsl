@@ -397,7 +397,7 @@
     <xsl:template match="dri:item" mode="nested">
         <li>
             <xsl:call-template name="standardAttributes">
-                <xsl:with-param name="class">ds-simple-list-item</xsl:with-param>
+                <xsl:with-param name="class">panel panel-default</xsl:with-param>
             </xsl:call-template>
             <xsl:apply-templates />
         </li>
