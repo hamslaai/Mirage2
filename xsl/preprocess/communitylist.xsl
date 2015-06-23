@@ -120,28 +120,30 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- Front page community list -->
     <xsl:template match="mets:METS" mode="community-browser">
       <xsl:variable name="dim" select="mets:dmdSec/mets:mdWrap/mets:xmlData/dim:dim"/>
-       <div class="panel panel-primary">
+       <div>
+        <!-- Display title with link-->
         <xref target="{@OBJID}" n="community-browser-link">
             <xsl:value-of select="$dim/dim:field[@element='title']"/>
         </xref>
-        <!--Display community strengths (item counts) if they exist-->
+        <!-- Display item counts if they exist -->
         <xsl:if test="string-length($dim/dim:field[@element='format'][@qualifier='extent'][1]) &gt; 0">
             <span>
-                <xsl:text> [</xsl:text>
-                <xsl:value-of
-                    select="$dim/dim:field[@element='format'][@qualifier='extent'][1]"/>
-                <xsl:text>]</xsl:text>
+                <xsl:text> (</xsl:text>
+	                <xsl:value-of select="$dim/dim:field[@element='format'][@qualifier='extent'][1]"/>
+                <xsl:text>)</xsl:text>
             </span>
         </xsl:if>
-
+        <!-- Display description
         <xsl:variable name="description" select="$dim/dim:field[@element='description'][@qualifier='abstract']"/>
         <xsl:if test="string-length($description/text()) > 0">
-            <p rend="hidden-xs">
+         <span style="margin-left: 40px;"> 
                 <xsl:value-of select="$description"/>
-            </p>
+         </span>
         </xsl:if>
+        -->
      </div>
     </xsl:template>
     
