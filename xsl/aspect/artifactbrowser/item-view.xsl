@@ -491,8 +491,8 @@
 
     <xsl:template match="dim:dim" mode="itemDetailView-DIM">
         <xsl:call-template name="itemSummaryView-DIM-title"/>
-        <div class="ds-table-responsive">
-            <table class="ds-includeSet-table detailtable table table-striped table-hover">
+        <div>
+            <table class="table table-bordered table-striped table-hover">
                 <xsl:apply-templates mode="itemDetailView-DIM"/>
             </table>
         </div>
@@ -508,12 +508,7 @@
 
     <xsl:template match="dim:field" mode="itemDetailView-DIM">
             <tr>
-                <xsl:attribute name="class">
-                    <xsl:text>ds-table-row </xsl:text>
-                    <xsl:if test="(position() div 2 mod 2 = 0)">even </xsl:if>
-                    <xsl:if test="(position() div 2 mod 2 = 1)">odd </xsl:if>
-                </xsl:attribute>
-                <td class="label-cell">
+                <td class="text-info">
                     <xsl:value-of select="./@mdschema"/>
                     <xsl:text>.</xsl:text>
                     <xsl:value-of select="./@element"/>
@@ -522,16 +517,17 @@
                         <xsl:value-of select="./@qualifier"/>
                     </xsl:if>
                 </td>
-            <td class="word-break">
+            <td class="text-muted text-justify word-break">
               <xsl:copy-of select="./node()"/>
             </td>
-                <td><xsl:value-of select="./@language"/></td>
-            </tr>
+            <td class="text-muted">
+              <xsl:value-of select="./@language"/>
+            </td>
+         </tr>
     </xsl:template>
 
     <!-- don't render the item-view-toggle automatically in the summary view, only when it gets called -->
-    <xsl:template match="dri:p[contains(@rend , 'item-view-toggle') and
-        (preceding-sibling::dri:referenceSet[@type = 'summaryView'] or following-sibling::dri:referenceSet[@type = 'summaryView'])]">
+    <xsl:template match="dri:p[contains(@rend , 'item-view-toggle') and (preceding-sibling::dri:referenceSet[@type = 'summaryView'] or following-sibling::dri:referenceSet[@type = 'summaryView'])]">
     </xsl:template>
 
     <!-- don't render the head on the item view page -->
