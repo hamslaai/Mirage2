@@ -107,20 +107,22 @@
         <div>
             <xsl:call-template name="itemSummaryView-DIM-title"/>
             <xsl:call-template name="itemSummaryView-DIM-authors"/>
-             <br/>           
+            <br/>           
             <xsl:call-template name="itemSummaryView-DIM-abstract"/>
-            <div>
-              <center>
-                <xsl:call-template name="itemSummaryView-DIM-URI"/>
-                <xsl:call-template name="itemSummaryView-collections"/>                
-              </center>
-            </div>
+            <div class="row">
                   <div class="col-md-6">
                           <xsl:call-template name="itemSummaryView-DIM-file-section"/>
                   </div>
                   <div class="col-md-6">
                           <xsl:call-template name="itemSummaryView-show-full"/>                          
                   </div>
+            </div>
+            <div>
+              <center>
+                <xsl:call-template name="itemSummaryView-DIM-URI"/>
+                <xsl:call-template name="itemSummaryView-collections"/>                
+              </center>
+            </div>
         </div>
     </xsl:template>
 
