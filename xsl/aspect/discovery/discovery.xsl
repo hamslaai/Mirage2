@@ -178,7 +178,7 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
-                    <h4>
+                    <h4 class="text-primary">
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.title'))]">
                                 <xsl:apply-templates select="dri:list[@n=(concat($handle, ':dc.title'))]/dri:item"/>
