@@ -158,9 +158,11 @@
 
             <!--Generates thumbnails (if present)-->
             <div class="col-sm-3 hidden-xs">
+               <center>
                 <xsl:apply-templates select="$metsDoc/mets:METS/mets:fileSec" mode="artifact-preview">
                     <xsl:with-param name="href" select="concat($context-path, '/handle/', $handle)"/>
                 </xsl:apply-templates>
+               </center>
             </div>
 
 
