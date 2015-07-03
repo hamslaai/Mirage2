@@ -43,10 +43,11 @@
         <!-- Generate the info about the item from the metadata section -->
         <xsl:apply-templates select="./mets:dmdSec/mets:mdWrap[@OTHERMDTYPE='DIM']/mets:xmlData/dim:dim"
         mode="itemSummaryView-DIM"/>
-
+         <!--
         <xsl:copy-of select="$SFXLink" />
-
+        -->
         <!-- Generate the Creative Commons license information from the file section (DSpace deposit license hidden by default)-->
+        <!--
         <xsl:if test="./mets:fileSec/mets:fileGrp[@USE='CC-LICENSE' or @USE='LICENSE']">
             <div class="license-info table">
                 <p>
@@ -57,7 +58,7 @@
                 </ul>
             </div>
         </xsl:if>
-
+        -->
 
     </xsl:template>
 
@@ -107,14 +108,14 @@
         <div>
             <xsl:call-template name="itemSummaryView-DIM-title"/>
             <xsl:call-template name="itemSummaryView-DIM-authors"/>
-            <br/>           
+            <xsl:call-template name="itemSummaryView-DIM-type"/>            
             <xsl:call-template name="itemSummaryView-DIM-abstract"/>
             <div class="row">
                   <div class="col-md-6">
-                          <xsl:call-template name="itemSummaryView-DIM-file-section"/>
+                          <xsl:call-template name="itemSummaryView-DIM-file-section"/>                         
                   </div>
                   <div class="col-md-6">
-                          <xsl:call-template name="itemSummaryView-show-full"/>                          
+                          <xsl:call-template name="itemSummaryView-show-full"/> 
                   </div>
             </div>
             <div>
@@ -127,6 +128,7 @@
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-title">
+       <center>
         <xsl:choose>
             <xsl:when test="count(dim:field[@element='title'][not(@qualifier)]) &gt; 1">
                 <h1 class="text-uppercase">
@@ -158,6 +160,7 @@
                 </h1>
             </xsl:otherwise>
         </xsl:choose>
+       </center>
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-thumbnail">
@@ -197,13 +200,13 @@
 
     <xsl:template name="itemSummaryView-DIM-abstract">
         <xsl:if test="dim:field[@element='description' and @qualifier='abstract']">
-            <div>
-              <span class="text-uppercase text-center"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></span>
+            <div style="margin-top: 10px;">
+              <!-- <span class="text-uppercase text-center"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-abstract</i18n:text></span> -->
                 <div>
                     <xsl:for-each select="dim:field[@element='description' and @qualifier='abstract']">
                         <xsl:choose>
                             <xsl:when test="node()">
-                                <p style="padding: 5px;" class="panel panel-default text-justify">
+                                <p style="padding: 10px;" class="panel panel-default text-justify">
                                 <xsl:copy-of select="node()"/>
                                 </p>
                             </xsl:when>
@@ -212,12 +215,18 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:for-each>
-                </div>
-                <div>
-                    <xsl:for-each select="dim:field[@element='description'][not(@qualifier)]">
+               </div>
+           </div>               
+       </xsl:if>
+    </xsl:template>
+    
+    <xsl:template name="itemSummaryView-DIM-type">
+        <xsl:if test="dim:field[@element='type']">
+            <div>
+                    <xsl:for-each select="dim:field[@element='type'][not(@qualifier)]">
                         <xsl:choose>
                             <xsl:when test="node()">
-                                <p style="padding: 5px;">
+                                <p class="text-info text-uppercase" style="margin-top: 10px;">
                                 <xsl:copy-of select="node()"/>
                                 </p>
                             </xsl:when>
@@ -226,12 +235,12 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:for-each>
-                </div>
             </div>
         </xsl:if>
     </xsl:template>
 
     <xsl:template name="itemSummaryView-DIM-authors">
+         <center>
             <div class="artifact-info">
                 <span class="text-primary">
                  <small>
@@ -290,6 +299,7 @@
                    </span>
                 </xsl:if>
             </div>
+       </center>
    </xsl:template>
     
     <xsl:template name="itemSummaryView-DIM-authors-entry">
@@ -345,7 +355,7 @@
             <br/>
              -->
              <h5>
-                 <a class="btn btn-primary">
+                 <a class="btn btn-danger">
                 <xsl:attribute name="href"><xsl:value-of select="$ds_item_view_toggle_url"/></xsl:attribute>
                 <i18n:text>xmlui.ArtifactBrowser.ItemViewer.show_full</i18n:text>
                 </a>                
@@ -368,7 +378,7 @@
     <xsl:template name="itemSummaryView-DIM-file-section">
         <xsl:choose>
             <xsl:when test="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
-                <div class="clearfix">
+                <div class="clearfix pull-left">
                     <!-- <h5 class="text-muted"><i18n:text>xmlui.dri2xhtml.METS-1.0.item-files-viewOpen</i18n:text></h5> -->
                     <p>
                     <xsl:variable name="label-1">
