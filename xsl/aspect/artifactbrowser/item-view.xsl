@@ -228,9 +228,11 @@
                         <xsl:choose>
                             <xsl:when test="node()">
                                <center>
-                                <p  style="margin-top: 10px;">
-                                 <xsl:copy-of select="node()"/>
-                                </p>
+                                <small>
+                                  <p  style="margin-top: 5px;">
+                                   <xsl:copy-of select="node()"/>
+                                  </p>
+                                </small>      
                                </center>
                             </xsl:when>
                             <xsl:otherwise>
@@ -265,7 +267,6 @@
          <center>
             <div class="artifact-info">
                 <span class="text-primary">
-                 <small>
                     <xsl:choose>
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
@@ -300,12 +301,10 @@
                             <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                         </xsl:otherwise>
                     </xsl:choose>
-                 </small>
                 </span>
                 <xsl:text> </xsl:text>
                 <xsl:if test="dim:field[@element='date' and @qualifier='issued']">
 	                <span class="text-primary">
-	                  <small>
 	                    <xsl:text> (</xsl:text>
 	                    <xsl:if test="dim:field[@element='publisher']">
 	                        <span class="publisher">
@@ -317,7 +316,6 @@
 	                        <xsl:value-of select="substring(dim:field[@element='date' and @qualifier='issued']/node(),1,10)"/>
 	                    </span>
 	                    <xsl:text>)</xsl:text>
-                     </small>
                    </span>
                 </xsl:if>
             </div>
