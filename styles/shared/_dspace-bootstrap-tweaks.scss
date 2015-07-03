@@ -225,6 +225,7 @@ p.pre {
   margin-top: 5px;
 }
 
-body {
- -webkit-font-smoothing: antialiased;
+html, html a {
+     -webkit-font-smoothing: antialiased !important;
+     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 } 

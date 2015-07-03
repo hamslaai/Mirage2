@@ -402,8 +402,7 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                     </xsl:variable>
-
-                    <xsl:for-each select="//mets:fileSec/mets:fileGrp[@USE='CONTENT' or @USE='ORIGINAL' or @USE='LICENSE']/mets:file">
+                    <xsl:for-each select="//mets:fileSec/mets:fileGrp[@USE='ORIGINAL']/mets:file">
                         <xsl:call-template name="itemSummaryView-DIM-file-section-entry">
                             <xsl:with-param name="href" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href" />
                             <xsl:with-param name="mimetype" select="@MIMETYPE" />
@@ -414,6 +413,30 @@
                             <xsl:with-param name="size" select="@SIZE" />
                         </xsl:call-template>
                     </xsl:for-each>
+                    <xsl:for-each select="//mets:fileSec/mets:fileGrp[@USE='CONTENT']/mets:file">
+                        <xsl:call-template name="itemSummaryView-DIM-file-section-entry">
+                            <xsl:with-param name="href" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href" />
+                            <xsl:with-param name="mimetype" select="@MIMETYPE" />
+                            <xsl:with-param name="label-1" select="$label-1" />
+                            <xsl:with-param name="label-2" select="$label-2" />
+                            <xsl:with-param name="title" select="mets:FLocat[@LOCTYPE='URL']/@xlink:title" />
+                            <xsl:with-param name="label" select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" />
+                            <xsl:with-param name="size" select="@SIZE" />
+                        </xsl:call-template>
+                    </xsl:for-each>
+                    <!--
+                    <xsl:for-each select="//mets:fileSec/mets:fileGrp[@USE='LICENSE']/mets:file">
+                        <xsl:call-template name="itemSummaryView-DIM-file-section-entry">
+                            <xsl:with-param name="href" select="mets:FLocat[@LOCTYPE='URL']/@xlink:href" />
+                            <xsl:with-param name="mimetype" select="@MIMETYPE" />
+                            <xsl:with-param name="label-1" select="$label-1" />
+                            <xsl:with-param name="label-2" select="$label-2" />
+                            <xsl:with-param name="title" select="mets:FLocat[@LOCTYPE='URL']/@xlink:title" />
+                            <xsl:with-param name="label" select="mets:FLocat[@LOCTYPE='URL']/@xlink:label" />
+                            <xsl:with-param name="size" select="@SIZE" />
+                        </xsl:call-template>
+                    </xsl:for-each>
+                    -->
                     </p>
                 </div>
             </xsl:when>

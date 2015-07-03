@@ -24,18 +24,18 @@ $link-color:             $brand-primary;
 $link-hover-color:       $brand-warning;
 $link-hover-decoration:  none;
 
-$text-color:             $gray-darker !default;
+$text-color:             $gray-dark !default;
 
-$body-bg:                $gray-light !default;
+$body-bg:                #ddd !default;
 
-$font-family-base:       'Droid Sans';
-$font-family-serif:      'Droid Sans',serif;
-$font-family-sans-serif: 'Droid Sans',sans-serif;
-$font-family-monospace:  'Droid Sans',monospace;
+$font-family-base:       'Ubuntu';
+$font-family-serif:      'Ubuntu',serif;
+$font-family-sans-serif: 'Ubuntu',sans-serif;
+$font-family-monospace:  'Ubuntu',monospace;
 
 $font-size-base:          14px;
-$font-size-large:         15px;
-$font-size-small:         13px;
+$font-size-large:         14px;
+$font-size-small:         14px;
 
 $font-size-h1:            1.0em;
 $font-size-h2:            1.0em;
