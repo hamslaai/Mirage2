@@ -200,7 +200,7 @@
                     </h4>
                 </xsl:element>
                 <div class="artifact-info">
-                    <span class="author h4">    <small>
+                    <span class="author h4">
                         <xsl:choose>
                             <xsl:when test="dri:list[@n=(concat($handle, ':dc.contributor.author'))]">
                                 <xsl:for-each select="dri:list[@n=(concat($handle, ':dc.contributor.author'))]/dri:item">
@@ -242,10 +242,10 @@
                                 <i18n:text>xmlui.dri2xhtml.METS-1.0.no-author</i18n:text>
                             </xsl:otherwise>
                         </xsl:choose>
-                        </small></span>
+                        </span>
                     <xsl:text> </xsl:text>
                     <xsl:if test="dri:list[@n=(concat($handle, ':dc.date.issued'))]">
-                        <span class="publisher-date h4">   <small>
+                        <span class="publisher-date h4">
                             <xsl:text>(</xsl:text>
                             <xsl:if test="dri:list[@n=(concat($handle, ':dc.publisher'))]">
                                 <span class="publisher">
@@ -258,7 +258,7 @@
                                         select="substring(dri:list[@n=(concat($handle, ':dc.date.issued'))]/dri:item,1,10)"/>
                             </span>
                             <xsl:text>)</xsl:text>
-                            </small></span>
+                            </span>
                     </xsl:if>
                     <xsl:choose>
                         <xsl:when test="dri:list[@n=(concat($handle, ':dc.description.abstract'))]/dri:item/dri:hi">

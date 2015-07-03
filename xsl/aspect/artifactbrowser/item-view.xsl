@@ -108,6 +108,7 @@
         <div>
             <xsl:call-template name="itemSummaryView-DIM-title"/>
             <xsl:call-template name="itemSummaryView-DIM-authors"/>
+            <xsl:call-template name="itemSummaryView-DIM-description"/>            
             <xsl:call-template name="itemSummaryView-DIM-type"/>            
             <xsl:call-template name="itemSummaryView-DIM-abstract"/>
             <div class="row">
@@ -220,6 +221,27 @@
        </xsl:if>
     </xsl:template>
     
+    <xsl:template name="itemSummaryView-DIM-description">
+        <xsl:if test="dim:field[@element='description']">
+                <div>
+                    <xsl:for-each select="dim:field[@element='description'][not(@qualifier)]">
+                        <xsl:choose>
+                            <xsl:when test="node()">
+                               <center>
+                                <p  style="margin-top: 10px;">
+                                 <xsl:copy-of select="node()"/>
+                                </p>
+                               </center>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:text>&#160;</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>                        
+                </div>
+        </xsl:if>
+    </xsl:template>
+
     <xsl:template name="itemSummaryView-DIM-type">
         <xsl:if test="dim:field[@element='type']">
             <div>
