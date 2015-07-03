@@ -365,8 +365,8 @@
 
     <xsl:template name="itemSummaryView-collections">
         <xsl:if test="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']">
-            <div class="panel panel-default">
-                <span class="text-info">
+            <div>
+                <span>
                 <i18n:text>xmlui.mirage2.itemSummaryView.Collections</i18n:text>
                 <xsl:text>: </xsl:text>
                 <xsl:apply-templates select="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference"/>
