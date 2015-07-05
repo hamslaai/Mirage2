@@ -62,6 +62,10 @@
     <xsl:template match="dri:list[@rend='horizontal'][@n='options']/dri:item[dri:hi[@rend='bold']]">
         <item>
             <xsl:call-template name="copy-attributes"/>
+            <xsl:attribute name="rend">
+                <xsl:value-of select="@rend"/>
+                <xsl:text> active</xsl:text>
+            </xsl:attribute>
             <xsl:apply-templates select="dri:hi/*"/>
         </item>
     </xsl:template>
