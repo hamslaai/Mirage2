@@ -28,10 +28,10 @@ $text-color:             $gray-dark !default;
 
 $body-bg:                #bbb !default;
 
-$font-family-base:       'Ubuntu';
-$font-family-serif:      'Ubuntu',serif;
-$font-family-sans-serif: 'Ubuntu',sans-serif;
-$font-family-monospace:  'Ubuntu',monospace;
+$font-family-base:       'Ubuntu', Verdana, 'Trebuchet MS', Arial;
+$font-family-serif:      'Ubuntu', Verdana, 'Trebuchet MS', Arial, serif;
+$font-family-sans-serif: 'Ubuntu', Verdana, 'Trebuchet MS', Arial, sans-serif;
+$font-family-monospace:  'Ubuntu', 'Andale Mono', 'Courier New', monospace;
 
 $font-size-base:          14px;
 $font-size-large:         14px;
