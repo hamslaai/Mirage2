@@ -96,9 +96,7 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div id="main-container" class="container">
-
                                 <div class="row row-offcanvas row-offcanvas-right">
                                     <div class="horizontal-slider clearfix">
                                         <div class="col-xs-12 col-sm-12 col-md-9 main-content">
@@ -111,8 +109,6 @@
                                   <xsl:call-template name="buildFooter"/>
                                 </div>
                             </div>
-
-
                         </xsl:otherwise>
                     </xsl:choose>
                     <!-- Javascript at the bottom for fast page loading -->
