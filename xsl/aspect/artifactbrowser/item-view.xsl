@@ -111,6 +111,7 @@
             <xsl:call-template name="itemSummaryView-DIM-description"/>            
             <xsl:call-template name="itemSummaryView-DIM-type"/>            
             <xsl:call-template name="itemSummaryView-DIM-abstract"/>
+            <xsl:call-template name="itemSummaryView-DIM-URI"/>
             <div class="row">
                   <div class="col-md-6">
                           <xsl:call-template name="itemSummaryView-DIM-file-section"/>                         
@@ -120,10 +121,7 @@
                   </div>
             </div>
             <div>
-              <center>
-                <xsl:call-template name="itemSummaryView-DIM-URI"/>
                 <xsl:call-template name="itemSummaryView-collections"/>                
-              </center>
             </div>
         </div>
     </xsl:template>
@@ -334,6 +332,7 @@
     <xsl:template name="itemSummaryView-DIM-URI">
         <xsl:if test="dim:field[@element='identifier' and @qualifier='uri' and descendant::text()]">
             <div class="well well-sm">
+              <center>
                 <span class="text-info">
                 <i18n:text>xmlui.dri2xhtml.METS-1.0.item-uri</i18n:text>
                 <xsl:text>: </xsl:text>
@@ -349,7 +348,8 @@
                         </xsl:if>
                     </xsl:for-each>
                </span>
-            </div>
+            </center>
+          </div>
         </xsl:if>
     </xsl:template>
 
@@ -386,11 +386,13 @@
     <xsl:template name="itemSummaryView-collections">
         <xsl:if test="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']">
             <div>
-                <span>
-                <i18n:text>xmlui.mirage2.itemSummaryView.Collections</i18n:text>
-                <xsl:text>: </xsl:text>
-                <xsl:apply-templates select="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference"/>
+              <center>
+                <span class="text-info">
+                   <i18n:text>xmlui.mirage2.itemSummaryView.Collections</i18n:text>
+                   <xsl:text>: </xsl:text>
+                   <xsl:apply-templates select="$document//dri:referenceSet[@id='aspect.artifactbrowser.ItemViewer.referenceSet.collection-viewer']/dri:reference"/>
                 </span>
+             </center>
             </div>
         </xsl:if>
     </xsl:template>
