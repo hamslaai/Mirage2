@@ -264,7 +264,7 @@
     <xsl:template name="itemSummaryView-DIM-authors">
          <center>
             <div class="artifact-info">
-                <span class="text-primary">
+                <span class="text-danger">
                     <xsl:choose>
                         <xsl:when test="dim:field[@element='contributor'][@qualifier='author']">
                             <xsl:for-each select="dim:field[@element='contributor'][@qualifier='author']">
@@ -302,14 +302,8 @@
                 </span>
                 <xsl:text> </xsl:text>
                 <xsl:if test="dim:field[@element='date' and @qualifier='issued']">
-	                <span class="text-primary">
+	                <span class="text-info">
 	                    <xsl:text> (</xsl:text>
-	                    <xsl:if test="dim:field[@element='publisher']">
-	                        <span class="publisher">
-	                            <xsl:copy-of select="dim:field[@element='publisher']/node()"/>
-	                        </span>
-	                        <xsl:text>, </xsl:text>
-	                    </xsl:if>
 	                    <span class="date">
 	                        <xsl:value-of select="substring(dim:field[@element='date' and @qualifier='issued']/node(),1,10)"/>
 	                    </span>
