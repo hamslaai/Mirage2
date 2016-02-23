@@ -854,7 +854,7 @@
 	     <script type="text/javascript">
         	 <xsl:text>var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.sun.ac.za/" : "http://piwik.sun.ac.za/");</xsl:text>
 	         <xsl:text>document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));</xsl:text>
-	     </script> -->
+	     </script> 
  
 	<script type="text/javascript">
 	    <xsl:text>
@@ -869,7 +869,7 @@
 	     }
 	       </xsl:text>
 	</script>
-        </xsl:if>        
+        </xsl:if>-->        
     </xsl:template>
 
     <!--The Language Selection-->
