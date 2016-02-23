@@ -836,7 +836,7 @@
         </xsl:if>
 
         <!-- Add a google analytics script if the key is present -->
-        <!--
+        
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
             <script><xsl:text>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -848,13 +848,13 @@
                   ga('send', 'pageview');
            </xsl:text></script>
         </xsl:if>
-        -->
-	<!-- Piwik W Klapwijk 2012-01 -->
+        
+	<!-- Piwik W Klapwijk 2012-01
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
 	     <script type="text/javascript">
         	 <xsl:text>var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.sun.ac.za/" : "http://piwik.sun.ac.za/");</xsl:text>
 	         <xsl:text>document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));</xsl:text>
-	     </script>
+	     </script> -->
  
 	<script type="text/javascript">
 	    <xsl:text>
