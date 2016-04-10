@@ -848,28 +848,6 @@
                   ga('send', 'pageview');
            </xsl:text></script>
         </xsl:if>
-        
-	<!-- Piwik W Klapwijk 2012-01
-        <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
-	     <script type="text/javascript">
-        	 <xsl:text>var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.sun.ac.za/" : "http://piwik.sun.ac.za/");</xsl:text>
-	         <xsl:text>document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));</xsl:text>
-	     </script> 
- 
-	<script type="text/javascript">
-	    <xsl:text>
-	     try {
-	       </xsl:text>
-	       <xsl:text>var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 3); </xsl:text>
-	       <xsl:text>piwikTracker.trackPageView();</xsl:text>
-	       <xsl:text>piwikTracker.enableLinkTracking();</xsl:text>
-	       <xsl:text>
-	     }
-     	catch( err ) {
-	     }
-	       </xsl:text>
-	</script>
-        </xsl:if>-->        
     </xsl:template>
 
     <!--The Language Selection-->
